@@ -7,8 +7,13 @@ jobs:
     runs-on: macos-14
     steps:
     - uses: actions/checkout@v4
+    - name: Show destinations
+      run: >
+        xcodebuild -showdestinations 
+        -scheme "PegGame Watch App" 
+        -project PegGame/PegGame.xcodeproj
     - name: Run tests
       run: >
         xcodebuild test -scheme "PegGame Watch App" 
         -project PegGame/PegGame.xcodeproj
-        -destination 'id=097E6079-06FA-4817-8CF8-8A0F68B6DD5E'
+        -destination 'platform=watchOS Simulator,OS=10.4,name=Apple Watch Series 9 (45mm)'
