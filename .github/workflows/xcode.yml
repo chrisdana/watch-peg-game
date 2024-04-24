@@ -8,4 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run tests
-      run: xcodebuild test -scheme "PegGame Watch App" -destination "platform=watchOS Simulator,name=Apple Watch Series 9 (45mm)" | xcpretty && exit ${PIPESTATUS[0]}
+      run: >
+        xcodebuild test -scheme "PegGame Watch App" 
+        -project PegGame/PegGame.xcodeproj 
+        -destination "platform=watchOS Simulator,name=Apple Watch Series 9 (45mm)" 
+        | xcpretty && exit ${PIPESTATUS[0]}
