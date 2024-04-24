@@ -16,4 +16,6 @@ jobs:
       run: >
         xcodebuild test -scheme "PegGame Watch App" 
         -project PegGame/PegGame.xcodeproj
-        -destination 'platform=watchOS Simulator,OS=10.4,name=Apple Watch Series 9 (45mm)'
+        -destination 'platform=iOS Simulator,OS=17.5,name=iPhone 15 Pro'
+        
+  # -destination 'platform=watchOS Simulator,OS=10.4,name=Apple Watch Series 9 (45mm)'
