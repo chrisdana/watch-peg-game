@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run tests
-      run: cd PegGame; xcodebuild -showdestinations
+      run: xcodebuild -showdestinations -scheme "PegGame Watch App" -project PegGame/PegGame.xcodeproj
     # - run: >
     #     xcodebuild test -scheme "PegGame Watch App" 
     #     -project PegGame/PegGame.xcodeproj 
